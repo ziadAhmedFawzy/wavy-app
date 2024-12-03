@@ -2,7 +2,7 @@ import LandingPage from './pages/landing_page';
 import CurtainsType from './pages/curtains_type';
 import Error from './pages/Error';
 import Header from './components/header';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Gallery from './pages/gallery';
 import AboutUs from './pages/about_us';
 import Footer from './components/footer';
