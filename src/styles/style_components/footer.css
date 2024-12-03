@@ -1,0 +1,67 @@
+footer  {
+    background-image: url("../../public/bg-wavy/bg.png");
+    background-size: cover;
+    background-position: center;
+    margin-top: 50px;
+    color: var(--secondary-color);
+}
+
+footer .header {
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+    padding-top: 60px;
+}
+
+footer .header .follow-by-email {
+    width: 50%;
+}
+
+footer .header .follow-by-email h5 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+footer .header form input {
+    width: 70%;
+    padding: 10px;
+    border: 3px dashed var(--main-color);
+    display: block;
+    margin: 10px 0;
+}
+
+footer .header form button {
+    width: 20%;
+    background-color: var(--secondary-color);
+    padding: 5px;
+    color: var(--main-color);
+    margin: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+footer .header form button:hover {
+    transform: scale(1.1);
+    border-radius: 20px;
+}
+
+footer .quick-links {
+    display: flex;
+    width: 80%;
+    flex-flow: row wrap;
+    margin: 50px auto 0 auto;
+    padding-bottom: 60px;
+    justify-content: space-around;
+}
+
+
+footer .quick-links h5 {
+    font-size: 20px;
+}
+
+footer .quick-links a {
+    color: var(--secondary-color);
+}

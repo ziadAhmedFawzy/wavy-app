@@ -7,7 +7,14 @@ import { ContextBox } from "../context/context";
 export default function Header() {
     const [yAxis, setYAis] = useState(0);
     const [statusHeader , setStatusHeader] = useState()
-    const { activate, setActivate } = useContext(ContextBox);
+    const [widthDisplay , setWidthDisplay] = useState(window.innerWidth)
+    const { 
+        activate, 
+        setActivate,
+        navbar, 
+        setNavbar,
+        setActiveNavbar,
+    } = useContext(ContextBox);
 
     useEffect(() => {
         const handleScroll = () => setYAis(window.scrollY);
@@ -36,8 +43,21 @@ export default function Header() {
         else {
             setStatusHeader('static-header')
         }
-    },[yAxis, activate])
-    console.log(statusHeader)
+    },[yAxis, activate, window.location.pathname])
+
+    window.addEventListener("resize", () => {
+        setWidthDisplay(window.innerWidth)
+    })
+
+    useEffect(() => {
+        if(widthDisplay <= 918) {
+            setNavbar(true)
+        }
+        else {
+            setNavbar(false)
+        }
+    }, [widthDisplay, setNavbar])
+
     return (
         <div 
             className={`main-header ${statusHeader}`} 
@@ -52,6 +72,8 @@ export default function Header() {
                         <Logo size="120px" />
                     </Link>
                 </h1>
+                {!navbar ? (
+                <>
                 <ul>
                     {links.map((link) => (
                         <li
@@ -69,6 +91,14 @@ export default function Header() {
                     ))}
                 </ul>
                 <button className="booking-now">احجز الأن</button>
+                </>
+                )
+                :
+                <button onClick={() => setActiveNavbar(true)} className="nav">
+                    <div className="line1 lin"></div>
+                    <div className="line2 lin"></div>
+                </button>
+                }
             </header>
         </div>
     );

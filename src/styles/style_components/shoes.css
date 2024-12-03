@@ -1,0 +1,29 @@
+.shoes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    color: var(--main-color);
+}
+
+.shoes div {
+    width: 300px;
+    text-align: center;
+}
+
+.map {
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.timework , .location {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.copyRight {
+    text-align: center;
+    padding: 10px;
+}

@@ -29,11 +29,25 @@
 
 .static-header {
     position: static;
-    background-color: red;
+    /* background-color: red; */
     z-index: 100;
     width: 100%;
 }
 
+.static-header .nav .lin {
+    background-color: var(--main-color);
+}
+.static-header .nav .lin::before {
+    content: '';
+    width: 10px;
+    height: 4px;
+    border-radius: 20px;
+    position: absolute;
+    background-color: var(--main-color);
+    left: 20px;
+    bottom: 8px;
+    transition-duration: 0.3s;
+}
 
 .main-header header {
     display: flex;
@@ -106,3 +120,47 @@
         font-weight: bold;
     }
 }
+
+header .nav {
+    background-color: transparent !important;
+    direction: ltr !important;
+    position: relative;
+    height: 40px;
+    border: none !important;
+}
+
+header .nav .lin {
+    width: 26px;
+    margin: 5px;
+    height: 4px;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+}
+
+header .nav::before {
+    content: '';
+    width: 10px;
+    height: 4px;
+    border-radius: 20px;
+    position: absolute;
+    background-color: var(--secondary-color);
+    left: 20px;
+    bottom: 8px;
+    transition-duration: 0.3s;
+}
+
+header .nav:focus::before {
+    width: 26px;
+} 
+
+.fixed-header .nav .lin {
+    background-color: var(--main-color);
+}
+
+.fixed-header .nav::before {
+    background-color: var(--main-color);
+}
+
+header .nav:focus::before {
+    width: 26px;
+} 
