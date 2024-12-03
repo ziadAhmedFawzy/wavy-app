@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --main-color: #0b4487;
+    --secondary-color: #f7f7f7;
+}
+
+::selection {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+}
+
+body {
+    direction: rtl;
+    font-family: "Cairo", serif;
+    background-color: var(--secondary-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    all: unset;
+}
+
+a:focus {
+    outline: none;
+}

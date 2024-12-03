@@ -1,0 +1,14 @@
+.Error {
+    text-align: center;
+    color: var(--main-color);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.Error a {
+    font-size: 20px;
+    color: var(--main-color);
+}

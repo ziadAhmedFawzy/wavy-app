@@ -1,0 +1,108 @@
+/* z-index: 998;  */
+
+.main-header {
+    transition: all 0.3s ease-in-out;
+    padding: 5px;
+    background-color: transparent;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.absolute-header {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+}
+
+.absolute-header ul li a {
+    color: var(--secondary-color) !important;
+}
+
+.absolute-header .booking-now:hover {
+    color: var(--secondary-color);
+}
+
+.static-header {
+    position: static;
+    background-color: red;
+    z-index: 100;
+    width: 100%;
+}
+
+
+.main-header header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.main-header header ul {
+    list-style: none;
+}
+
+.main-header header ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.main-header header ul li a {
+    color: var(--secondary-color);
+    position: relative;
+}
+
+.main-header header ul li a::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: var(--secondary-color);
+    transition-duration: 0.2s;
+}
+
+.main-header header ul li a:hover::before {
+    width: 100%;
+} 
+
+.main-header header button {
+    padding: 5px 15px;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.main-header header button:hover {
+    background-color: transparent;
+    color: var(--main-color);
+    transform: scale(1.1);
+}
+
+.activate {
+    animation-duration: 0.2s;
+    animation-name: tranistionActivate;
+    transform: scale(1.1);
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+@keyframes tranistionActivate {
+    0% {
+        font-weight: normal;
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+        font-weight: bold;
+    }
+}
