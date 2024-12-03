@@ -13,8 +13,8 @@ import { Link } from "react-router-dom";
 export default function LandingPage() {
     const { activate } = useContext(ContextBox);
     console.log(activate);
-
     useEffect(() => {
+        document.title = "wivy - ويفي"
         new Swiper('.swiper', {
             modules: [Navigation, Pagination, Autoplay, EffectFade], 
             loop: true,
