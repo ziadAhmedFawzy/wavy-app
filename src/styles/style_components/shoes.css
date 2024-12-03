@@ -27,3 +27,9 @@
     text-align: center;
     padding: 10px;
 }
+
+@media screen and (max-width: 364px) {
+    .map {
+        width: 100% !important; 
+    }
+}

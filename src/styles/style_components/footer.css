@@ -65,3 +65,21 @@ footer .quick-links h5 {
 footer .quick-links a {
     color: var(--secondary-color);
 }
+
+@media screen and (max-width: 555px) {
+    footer .quick-links {
+        flex-flow: column wrap;
+    }
+    footer .header .follow-by-email {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer .header form input {
+        margin: auto;
+    }
+
+    footer .header img {
+        width: 100%;
+    }
+}
