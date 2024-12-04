@@ -43,7 +43,7 @@ export default function Shoes() {
             <p>9AM - 9PM :السبت</p>
         </div>
     </div>
-    <p className="copyRight">جميع الحقوق محفوظة لشركة ويفي، تطوير وتصميم المهندس زياد فوزي.</p>
+    <p className="copyRight">جميع الحقوق محفوظة لشركة ويفي، تطوير وتصميم شركة White Sky.</p>
     </>
   );
 }
